@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "client": "npm start --prefix ./clientapp",
+    "dev": "concurrently \"npm run server\" \"npm start\"" 
   },
   "author": "ishika",
   "license": "MIT",
@@ -14,6 +16,7 @@
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
     "colors": "^1.4.0",
+    "concurrently": "^9.2.0",
     "cookie": "^1.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
