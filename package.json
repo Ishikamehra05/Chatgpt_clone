@@ -1,14 +1,22 @@
 {
   "name": "chat-gpt-clone",
   "version": "1.0.0",
-  "description": "chat-gpt-clone",
+  "description": "A full-featured ChatGPT clone built with MERN stack",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
     "start": "node server.js",
     "client": "npm start --prefix ./clientapp",
-    "dev": "concurrently \"npm run server\" \"npm start\"" 
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "setup": "node setup.js",
+    "build": "npm run build --prefix ./clientapp",
+    "install-all": "npm install && npm install --prefix ./clientapp",
+    "test-backend": "node test-backend.js",
+    "test-chat": "node test-chat-session.js",
+    "test-message": "node test-send-message.js",
+    "test-all": "node test-complete-flow.js",
+    "test-legacy": "node test-legacy-tools.js"
   },
   "author": "ishika",
   "license": "MIT",
@@ -24,6 +32,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.0",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "openai": "^4.67.3",
+    "uuid": "^11.0.3",
+    "axios": "^1.10.0"
   }
 }
